@@ -7,19 +7,19 @@ variable "gitlab_group" {
 variable "gitlab_subgroup" {
   type = string
   description = "Gitlab subgroup name"
-  default = "aws"
+  default = "gitops-argocd-demo"
 }
 
 variable "gitlab_project" {
   type = string
   description = "Gitlab project name"
-  default = "terraform-eks-with-argocd"
+  default = "*"
 }
 
 variable "gitlab_branch" {
   type = string
   description = "Gitlab project branch name"
-  default = "feature/oidc-test"
+  default = "*"
 }
 
 variable "gitlab_url" {

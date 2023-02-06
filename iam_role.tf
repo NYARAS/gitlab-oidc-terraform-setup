@@ -11,7 +11,7 @@ resource "aws_iam_role" "gitlab_ci" {
       },
       "Action": "sts:AssumeRoleWithWebIdentity",
       "Condition": {
-        "StringEquals": {
+        "StringLike": {
           "gitlab.com:sub": "project_path:${var.gitlab_group}/${var.gitlab_subgroup}/${var.gitlab_project}:ref_type:branch:ref:${var.gitlab_branch}"
         }
       }
